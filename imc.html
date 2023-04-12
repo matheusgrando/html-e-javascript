@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+	
+	function pulaLinha() {
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+
+		document.write("<big>" + frase + "</big>");
+		pulaLinha();
+	}
+
+	function calculaImc(peso, altura) {
+
+		return imc = peso/(altura * altura);
+	}
+
+	var nome = prompt("Informe o seu nome");
+	var alturaInformada = prompt(nome + ", informe a sua altura (em metros)");
+	var pesoInformado = prompt(nome + ", informe o seu peso (em quilos)");
+
+	var imc = calculaImc(pesoInformado, alturaInformada);
+
+	mostra(nome + ", o seu IMC é de " + imc.toFixed(2));
+
+	if (imc >= 17.0 && imc <= 18.4) {
+
+		mostra("O seu IMC é classificado como Magreza grau I.");
+	}
+
+	if (imc >= 18.5 && imc <= 24.9) {
+
+		mostra("O seu IMC é classificado como Adequado.");		
+	}
+
+	if (imc >= 25.0 && imc <= 29.9) {
+
+		mostra("O seu IMC é classificado como Pré-obeso.");		
+	}
+
+	if (imc >= 30.0 && imc <= 34.9) {
+
+		mostra("O seu IMC é classificado como Obesidade grau I.");		
+	}
+
+</script>
+</body>
+</html>
